@@ -2,9 +2,9 @@
 * instalacion_linux
 * Script desarrollado en bash
 *********************************************
-* Diseñado por SUKIGSX                      *
-* Contacto: sukisx@reparaciondesistemas.com *
-* www.reparaciondesistemas.com              *
+* Diseñado por SUKIGSX
+* Contacto: sukisx@reparaciondesistemas.com
+* www.reparaciondesistemas.com
 *********************************************
 
 Esta pensado para la instalacion de software de forma automatizada.
