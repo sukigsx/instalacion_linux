@@ -91,7 +91,7 @@ echo "- 21. Disco de gnome, graba las iso y funciona en entorno KDE             
 echo "- 22. Brasero, para quemar cd y dvd                                            - 50. Teamviewer host, Control remoto                                          -"
 echo "- 23. K3b, quemador de cd y dbd de KDE                                         - 51- Transmision, descarga de torrent                                         -"
 echo "- 24. Steam, plataforma de juegos                                              - 52- Software-propietario, Gui gestionar ppa's, software propietario (video)  -"
-echo "- 25. Spotify, plataforma de musica, Requiere Snap                             -                                                                              -"
+echo "- 25. Spotify, plataforma de musica, Requiere Snap                             - 53- Fping, parecido a ping, pero con mas opciones                            -"
 echo "- 26. Digikam, editor de fotos de KDE                                          -                                                                              -"
 echo "- 27. Snap, instalador de paquetes                                             -                                                                              -"
 echo "- 28. Ocamlfuse, sincronizar google drive                                      -                                                                              -"
@@ -732,6 +732,18 @@ case $opcion in
     52) clear;
         
         echo "sudo apt install -y software-properties-gtk software-properties-qt" >> /tmp/instalar_software.sh;
+        echo "" >> /tmp/instalar_software.sh;
+        echo "---------------------------------------------------------------------------------------------------------------------------------------------------------------";
+        echo "-                                                                 Software añadido                                                                            -";
+        echo "---------------------------------------------------------------------------------------------------------------------------------------------------------------";
+        echo "-                                                            Cuando termines de seleccionar                                                                   -";
+        echo "-                                                            el software selecciona 90                                                                        -";
+        echo "---------------------------------------------------------------------------------------------------------------------------------------------------------------"; 
+        read -p "- Pulsa ENTER para continuar " pause;;
+        
+    53) clear;
+        
+        echo "sudo apt install -y fping" >> /tmp/instalar_software.sh;
         echo "" >> /tmp/instalar_software.sh;
         echo "---------------------------------------------------------------------------------------------------------------------------------------------------------------";
         echo "-                                                                 Software añadido                                                                            -";
