@@ -1,0 +1,233 @@
+ #!/bin/bash
+###################################################################################################3
+#forma de utilizar los colores en echo
+#echo -e "${rojo}Estes es el texto en rojo.${borra_colores"
+#colores
+rojo="\e[0;31m\033[1m" #rojo
+verde="\e[;32m\033[1m" 
+azul="\e[0;34m\033[1m"
+amarillo="\e[0;33m\033[1m"
+rosa="\e[0;35m\033[1m"
+turquesa="\e[0;36m\033[1m"
+borra_colores="\033[0m\e[0m" #borra colores
+
+###################################################################################################
+
+
+#toma el control al pulsar control + c
+trap ctrl_c INT
+function ctrl_c()
+{
+clear
+echo "-----------------------------------------------------------------------------------------------------------------------------------------------"
+echo "-                                          ___                     _                                                                          -"
+echo "-                                         / __|  ___   ____   __  (_)  ____   ___    ____   ___   _ _                                         -"
+echo "-                                        | (_ | |  _| / _  | / _| | | / _  | (_-<   |  _ \ / _ \ |  _|                                        -"
+echo "-                                         \___| |_|   \____| \__| |_| \____| /__/   | .__/ \___/ |_|                                          -"
+echo "-                                                                                   |_|                                                       -"
+echo "-                            _   _   _     _   _   _                               _                     _          _                         -"
+echo "-                           | | | | | |_  (_) | | (_)  ___  ____   _ _     ____   (_)    ___  __   _ _  (_)  ____  | |_                       -"
+echo "-                           | |_| | |  _| | | | | | | |_ / / _  | |  _|   |    \  | |   (_-< / _| |  _| | | |  _ \ |  _|                      -"
+echo "-                            \___/   \__| |_| |_| |_| /__| \____| |_|     |_|_|_| |_|   /__/ \__| |_|   |_| |  __/  \__|                      -"
+echo "-                                                                                                           |_|                               -"
+echo "-----------------------------------------------------------------------------------------------------------------------------------------------"
+exit
+}
+
+###################################################################################################
+#funcion ayuda
+function ayuda(){
+clear
+echo "-----------------------------------------------------------------------------------------------------------------------------------------------"
+echo "- Explicacion de los menus principales:                                                                                                       -"
+echo "-----------------------------------------------------------------------------------------------------------------------------------------------"
+echo "-     1. Actualizacion de sistema con update     >>   Basicamente realiza una actualizacion de la lista de repositorios de tu sistema.        -"
+echo "-     2. Actualizacion de sistema con upgrade    >>   Realiza la instalacion de las actualizaciones de software y paquetes de tu sistemas.    -"
+echo "-     3. Actualizar sistema con update y upgrade >>   Realiza los dos pasos anteriores a la vez.                                              -"
+echo "-     4. Actualizacion completo (solo KDE)       >>   Realiza la actualizacion del sistema complatamente, solo para entornos KDE PLASMA.      -"
+echo "-     5. Instalacion repositorios y actualizar   >>   Instala repositorios adicionales, para poder instalar software.                         -"
+echo "-     6. Instalar sostware de repositorios       >>   Instalacion de software que tengas disponible en tus repositorios.                      -"
+echo "-     7. Instalar software externo               >>   Podras descargar los paquetes *.deb y luego se instalar todos a la vez.                 -"
+echo "-     8. Busca equipos en la red                 >>   Realiza un nmap que busque dispositivos conectados en tu red para saber la ip.          -"
+echo "-     9. Conectar a equipo de red                >>   Cuando ya sabes la ip, te facilita la conexion por ssh.                                 -"
+echo "-                                                                                                                                             -"
+echo "-    90. Menu de ayuda                           >>   Lo que estas biendo jejeje                                                              -"
+echo "-    99. Salir                                   >>   Sale del script                                                                         -"
+echo "-----------------------------------------------------------------------------------------------------------------------------------------------"
+read -p "- Pulsa ENTER para continuar " pause
+}
+
+#########################################################
+# Aqui empieza el tema
+while :
+do
+clear
+echo "-----------------------------------------------------------------------------------------------------------------------------------------------"
+echo "|                                                                                                                                             |"
+echo "|                          ███████        ██    ██        ██   ██        ██         ██████         ███████        ██   ██                     |"
+echo "|                          ██             ██    ██        ██  ██         ██        ██              ██              ██ ██                      |"
+echo "|                          ███████        ██    ██        █████          ██        ██   ███        ███████          ███                       |"
+echo "|                               ██        ██    ██        ██  ██         ██        ██    ██             ██         ██ ██                      |"
+echo "|                          ███████         ██████         ██   ██        ██         ██████         ███████        ██   ██                     |"
+echo "|                                                                                                                                             |"
+echo "-----------------------------------------------------------------------------------------------------------------------------------------------"
+echo -e "-  ${verde}Diseñado por sukigsx / Contacto: | contacto@reparaciondesistemas.com  |                        Para mejor visualizacion, presiona F11. ${borra_colores}    -"
+echo -e "-  ${verde}                                 | www.reparaciondesistemas.com       |                        Control + C -->> finalizar script. ${borra_colores}         -"
+echo "-----------------------------------------------------------------------------------------------------------------------------------------------"
+echo -e "-    ${verde} Nombre del script < inicio >                      Instalacion de software en sintemas linux.  ${borra_colores}                                          -"
+echo "-----------------------------------------------------------------------------------------------------------------------------------------------"
+echo "-     1. Actualizacion de sistema con update.                 >>     Orden sudo apt update.                                                   -"
+echo "-     2. Actualizacion de sistema con upgrade.                >>     Orden sudo apt upgrade.                                                  -"
+echo "-     3. Actualizar sistema completo con update y upgrade.    >>     Orden sudo apt update & apt upgrade.                                     -"
+echo "-     4. Actualizar completo. ( Solo valido para kde ).       >>     Orden sudo pkcon update.                                                 -"
+echo "-     5. Instalar repositorios y actualizar.                  >>     Ejecuta script (bash instalar_repositorios.sukigsx).                     -"
+echo "-----------------------------------------------------------------------------------------------------------------------------------------------"
+echo "-     6. Instalar software de repositorios.                   >>     Seleccion de software incluido dentro de los repositorios para instalar. -"
+echo "-     7. Instalar software externo.                           >>     Seleccion de software externo.                                           -"
+echo "-----------------------------------------------------------------------------------------------------------------------------------------------"
+echo "-     8. Buscar equipos en la red.                           >>      Localizar ip,s de equipos en red.                                        -"
+echo "-     9. Conectar a equipo de red.                           >>      Se coneccta por ssh al equipo seleccionado.                              -"
+echo "-----------------------------------------------------------------------------------------------------------------------------------------------"
+echo "-    90. Ayuda.                                              >>      Su nombre lo dice todo.                                                  -"
+echo "-    99. Salir.                                              >>      Sale del script.                                                         -"
+echo "-----------------------------------------------------------------------------------------------------------------------------------------------"
+echo -n "- Seleccione una opcion del menu --->>> "
+read opcion
+case $opcion in
+    1) #Actualizar el sistema con update
+        clear;
+        echo "-----------------------------------------------------------------------------------------------------------------------------------------------";
+        echo "- Enpezando el update.                                                                                                                        -";
+        echo "-----------------------------------------------------------------------------------------------------------------------------------------------";
+        sudo apt update;
+        echo "-----------------------------------------------------------------------------------------------------------------------------------------------";
+        echo "- sudo apt update, Realizado con exito.                                                                                                       -";
+        echo "-----------------------------------------------------------------------------------------------------------------------------------------------";
+        read -p "- Pulsa ENTER para continuar " pause;;
+        
+    2) #Actualizar con upgrade
+        if [ -d /home/$(whoami)/.kde ]
+        then
+            echo -e "${rojo}-----------------------------------------------------------------------------------------------------------------------------------------------${borra_colores}";
+            echo -e "${rojo}- LO SIENTO, He destectado KDE, la orden no se puede ejecutar, SELECCIONA OPCION ( 4 )                                                        -${borra_colores}";
+            echo -e "${rojo}-----------------------------------------------------------------------------------------------------------------------------------------------${borra_colores}";
+            read -p "- Pulsa ENTER para continuar " pause;
+        else
+        sudo apt upgrade;
+        echo "-----------------------------------------------------------------------------------------------------------------------------------------------";
+        echo "- sudo apt upgrade, Realizado con exito.                                                                                                      -";
+        echo "-----------------------------------------------------------------------------------------------------------------------------------------------";
+        fi;;
+        
+        
+    3) #Actualizar sistema completo NO kde update y upgrade
+        if [ -d /home/$(whoami)/.kde ]
+        then
+            echo -e "${rojo}-----------------------------------------------------------------------------------------------------------------------------------------------${borra_colores}";
+            echo -e "${rojo}- LO SIENTO, He destectado KDE, la orden no se puede ejecutar, SELECCIONA OPCION ( 4 )                                                        -${borra_colores}";
+            echo -e "${rojo}-----------------------------------------------------------------------------------------------------------------------------------------------${borra_colores}";
+            read -p "- Pulsa ENTER para continuar " pause;
+        else
+        sudo apt update;
+        sudo apt upgrade;
+        echo "-----------------------------------------------------------------------------------------------------------------------------------------------";
+        echo "- sudo apt upgrade, Realizado con exito.                                                                                                      -";
+        echo "-----------------------------------------------------------------------------------------------------------------------------------------------";
+        fi;;
+    
+    4) #Actualizar completo solo kde con pkcon update
+        if [ -d /home/$(whoami)/.kde ]
+        then
+            sudo pkcon update;
+            echo "-----------------------------------------------------------------------------------------------------------------------------------------------";
+            echo "- sudo pkcon update, realizado con exito                                                                                                      -";
+            echo "-----------------------------------------------------------------------------------------------------------------------------------------------";
+        else
+            echo "-----------------------------------------------------------------------------------------------------------------------------------------------";
+            echo -e "- ${rojo}Lo siento no estas en un sistema con entorno KDE, seleccion opcion 3.${borra_colores}                                                                       -";
+            echo "-----------------------------------------------------------------------------------------------------------------------------------------------";
+            read -p "- Pulsa ENTER para continuar " pause;
+        fi;;
+    
+    5) #Instalar repositorios
+        bash instalar_repositorios.sukigsx;;
+        
+    6) #Instalar software de repositorios
+        bash instalar_software_incluido_en_los_repositorios.sukigsx;;
+        
+    7) #Instalar software de terceros
+        bash instalar_software_no_incluido_en_los_repositorios.sukigsx;;
+    
+    8) #Buscar equipos en la red con nmap
+        echo -e "- Tu ip en la red es ${verde}$(hostname -I)${borra_colores}"
+        read -p "- Dime el rango de tu red lan, por (Ejemplo, 192.168.1) -->> " rango_ip;
+        if [ -d /usr/share/nmap ]
+        then 
+            clear;
+            echo "-----------------------------------------------------------------------------------------------------------------------------------------------";
+            echo -e "- ${verde}Escaneando la red con orden de nmap -sP $rango_ip.0/24${borra_colores}";
+            echo "-----------------------------------------------------------------------------------------------------------------------------------------------";
+            nmap -sP $rango_ip.0/24;
+            echo "-----------------------------------------------------------------------------------------------------------------------------------------------";
+            echo -e "-${verde} TERMINADO, Red escaneada.${borra_colores}                                                                                                                   -";
+            echo "-----------------------------------------------------------------------------------------------------------------------------------------------";
+            read -p "- Pulsa ENTER para continuar " pause;
+        else
+            clear;
+            echo "-----------------------------------------------------------------------------------------------------------------------------------------------";
+            echo -e "-${verde} Instalando nmap y Escaneando la red con orden de nmap -sP $rango_ip.0/24${borra_colores}";
+            echo "-----------------------------------------------------------------------------------------------------------------------------------------------";
+            sleep 2;
+            sudo apt install -y nmap;
+            clear;
+            nmap -sP $rango_ip.0/24;
+            echo "-----------------------------------------------------------------------------------------------------------------------------------------------";
+            echo -e "-${verde} TERMINADO, Red escaneada.${borra_colores}                                                                                                                   -";
+            echo "-----------------------------------------------------------------------------------------------------------------------------------------------";
+            read -p "- Pulsa ENTER para continuar " pause;
+        fi;;
+        
+     9) #conectar a equipo en la red, por ssh
+        echo -e "- Tu ip en la red es ${verde}$(hostname -I)${borra_colores}"
+        read -p "- Dime direccion ip a conectar por (ssh) -->> " ssh_ip;
+        read -p "- Dime el puerto (ssh, defecto 22) de la maquina $ssh_ip --> " port_maquina_remota
+        read -p "- Dime nombre de usuario de $ssh_ip con puerto $port_maquina_remota -->> " ssh_usuario;
+        clear;
+                port=$port_maquina_remota;  # puerto
+                connect_timeout=5;            # Tiempo de espera
+                timeout $connect_timeout bash -c "</dev/tcp/$ssh_ip/$port";
+                if [ $? == 0 ] 2>/dev/null
+                then
+                    ssh-keygen -f "/home/sukigsx/.ssh/known_hosts" -R "$ssh_ip" 2>/dev/null
+                    clear
+                    ssh -t -p $port_maquina_remota $ssh_usuario@$ssh_ip "clear;echo INFORMACION de Sukigsx;echo;echo ESTAS EN LA MAQUINA REMOTA;echo;exec \$SHELL --login"
+                    echo "-----------------------------------------------------------------------------------------------------------------------------------------------";
+                    echo -e "- ${verde}SALIENDO DE LA CONEXION SSH${borra_colores}, Si has tenido problemas de conexion, puedes ejecutar una terminal, con la opcion 11                            -";
+                    echo "-----------------------------------------------------------------------------------------------------------------------------------------------";
+                    echo "- Espara un momento ..........                                                                                                                -";
+                    echo "-----------------------------------------------------------------------------------------------------------------------------------------------";
+                    sleep 5;
+                else
+                    clear;
+                    echo "-----------------------------------------------------------------------------------------------------------------------------------------------";
+                    echo -e "- ${rojo}La conexion al servidor ssh de la maquina $ssh_ip, NO esta disponible.${borra_colores}";
+                    echo "-----------------------------------------------------------------------------------------------------------------------------------------------";
+                    echo "- Espara un momento ..........                                                                                                                -";
+                    echo "-----------------------------------------------------------------------------------------------------------------------------------------------";
+                    sleep 5;
+                fi;;
+    
+    90) #ayuda
+        ayuda;;
+                
+    99) #salida
+        ctrl_c;;
+
+*) echo "";
+echo "-----------------------------------------------------------------------------------------------------------------------------------------------";
+echo -e "- ${amarillo}OPCION NO DISPONIBLE EN EL MENU.    Seleccion 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 a 99        Tambien escribiendo ( 90 = ayuda )${borra_colores}              -";
+echo -e "- ${amarillo}PRESIONA ENTER PARA CONTINUAR ........${borra_colores}                                                                                                      -";
+echo "-----------------------------------------------------------------------------------------------------------------------------------------------";
+read pause;;
+esac
+done
