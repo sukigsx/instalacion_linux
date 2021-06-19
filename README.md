@@ -20,7 +20,7 @@ con este script podras:
  
 ### INSTALACION:
 #### Clonar el repositorio, desde la terminal.
-     git clone
+     git clone https://github.com/sukigsx/Instalacion-software.git
 #### Descargarte el zip
      Descomprimir, dar permisos de ejecucion a todos los ficheros ( chmod +x * ).
 #### Instalar el paquete deb, desde el terminal.
