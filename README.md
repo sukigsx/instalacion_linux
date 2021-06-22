@@ -26,8 +26,9 @@ con este script podras:
      Descomprimir, dar permisos de ejecucion a todos los ficheros ( chmod +x * ).
 
 #### Instalar el paquete deb, desde el terminal.
-     Instalar ejecutar ---> sudo dpkg -i Instalacion-software.deb
-     Desistalar ejecutar -> sudo dpkg -r Instalacion-software
+     sudo dpkg -i Instalacion-software.deb
+#### Desistalar el paquete deb, desde el terminal.
+     sudo dpkg -r Instalacion-software
 ##### Si tienes una utilidad grafica de instalacion de paquetes, solo tendras que hacer doble click y listo.
      Si lo has instalado desde el paquete deb:
      Tendras un acceso directo en tu mennu de inicio en utilidades y en sistema.
