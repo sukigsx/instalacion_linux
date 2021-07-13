@@ -19,20 +19,20 @@ con este script podras:
 - Instalacion en equipos remotos.
  
 ### INSTALACION:
-#### Clonar el repositorio, desde la terminal.
-     git clone https://github.com/sukigsx/Instalacion-software.git
 
-#### Descargarte el zip
-     Descomprimir, dar permisos de ejecucion a todos los ficheros ( chmod +x * ).
+#### Opcion 1 (descargar e instalar el paquete DEB)
+- [Descargar el paque DEB](https://github.com/sukigsx/Instalacion-software/raw/main/Instalacion-software.deb). Y lo puedes instalar con tu forma habitual.
+- Instalar paquete DEB desde linea de comando en la terminal, lo descarga, lo instala y despues borra el paquete DEB.
 
-#### Instalar el paquete deb, desde el terminal.
-     sudo dpkg -i Instalacion-software.deb
+      wget https://github.com/sukigsx/Instalacion-software/raw/main/Instalacion-software.deb; sudo dpkg -i Instalacion-software.deb; rm Instalacion-software.deb
+      
+ - Clonar el repositorio, desde la terminal. Dar permisos de ejecucion a todos los ficheros.
+ 
+       git clone https://github.com/sukigsx/Instalacion-software.git
+     
 #### Desistalar el paquete deb, desde el terminal.
      sudo dpkg -r Instalacion-software
-##### Si tienes una utilidad grafica de instalacion de paquetes, solo tendras que hacer doble click y listo.
-     Si lo has instalado desde el paquete deb:
-     Tendras un acceso directo en tu mennu de inicio en utilidades y en sistema.
-     
+
 #### Ejecutar
      Una vez clonado el repositorio y con permisos de ejecucion.
      ./inicio.sukigsx
