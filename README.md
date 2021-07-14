@@ -9,11 +9,11 @@
 Este script esta pensado para la instalacion de software de forma automatizada.
 
 - Actualizar el sistema en entornos gnome y plasma.
-- Instalartelo en tu maquina local.
 - Poder instalar otras maquinas de forma remota por ssh.
 - Instalacion de repositorios.
-- Instalar software externo a los repositorios de forma automatica.
-- Buscar equipos por tu red.
+- Instalacion de una gran cantidad de software incluida en repositorios.
+- Instalacion software externo a los repositorios de forma automatica.
+- Buscar equipos por tu red, para poder instalar en remoto.
 - Conectar a equipo de red por ssh.
 - Ejecuta una terminal de comandos.
 - Instalacion en equipos remotos.
