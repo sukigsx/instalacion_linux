@@ -41,5 +41,5 @@ Este script esta pensado para la instalacion de software de forma automatizada.
      
  
 ### NOTA.
-     Le voy poniendo cada poco tiempo nuevas funcionalidades y nuevo software que me parece acto 
-     para nuestras distribuciones de linux y que considero de utilidad.
+Le voy poniendo cada poco tiempo nuevas funcionalidades y nuevo software que me parece acto 
+para nuestras distribuciones de linux y que considero de utilidad.
