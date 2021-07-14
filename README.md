@@ -7,7 +7,7 @@
 *********************************************
 
 Este script esta pensado para la instalacion de software de forma automatizada.
-con este script podras:
+
 - Actualizar el sistema en entornos gnome y plasma.
 - Instalartelo en tu maquina local.
 - Poder instalar otras maquinas de forma remota por ssh.
