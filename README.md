@@ -6,7 +6,7 @@
 * Contacto: reparaciondesistemas.com@gmail.com
 *********************************************
 
-Esta pensado para la instalacion de software de forma automatizada.
+Este script esta pensado para la instalacion de software de forma automatizada.
 con este script podras:
 - Actualizar el sistema en entornos gnome y plasma.
 - Instalartelo en tu maquina local.
@@ -20,7 +20,7 @@ con este script podras:
  
 ### INSTALACION:
 
-#### Opcion 1 (descargar e instalar el paquete DEB)
+#### Descargar e instalar el paquete DEB.
 - [Descargar el paque DEB](https://github.com/sukigsx/Instalacion-software/raw/main/Instalacion-software.deb). Y lo puedes instalar con tu forma habitual.
 - Instalar paquete DEB desde linea de comando en la terminal,lo descarga, lo instala y despues borra el paquete DEB.
 
