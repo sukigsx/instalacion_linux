@@ -3,7 +3,7 @@
 * Script desarrollado en bash
 *********************************************
 * Diseñado por SUKIGSX
-* Contacto: reparaciondesistemas.com@gmail.com
+* Contacto: sukigsx.scripts@gmail.com
 *********************************************
 
 Este script esta pensado para la instalacion de software de forma automatizada.
