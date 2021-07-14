@@ -22,7 +22,7 @@ con este script podras:
 
 #### Opcion 1 (descargar e instalar el paquete DEB)
 - [Descargar el paque DEB](https://github.com/sukigsx/Instalacion-software/raw/main/Instalacion-software.deb). Y lo puedes instalar con tu forma habitual.
-- Instalar paquete DEB desde linea de comando en la terminal, lo descarga, lo instala y despues borra el paquete DEB.
+- Instalar paquete DEB desde linea de comando en la terminal,lo descarga, lo instala y despues borra el paquete DEB.
 
       wget https://github.com/sukigsx/Instalacion-software/raw/main/Instalacion-software.deb; sudo dpkg -i Instalacion-software.deb; rm Instalacion-software.deb
       
@@ -33,9 +33,12 @@ con este script podras:
 #### Desistalar el paquete deb, desde el terminal.
      sudo dpkg -r Instalacion-software
 
-#### Ejecutar
-     Una vez clonado el repositorio y con permisos de ejecucion.
-     ./inicio.sukigsx
+### Forma de ejecucion
+- Si has clonado el repositorio y con permisos de ejecucion.
+
+      ./inicio.sukigsx
+- Si has instalado el paquete. Lo encontraras en el lanzador.
+     
  
 ### NOTA.
      Le voy poniendo cada poco tiempo nuevas funcionalidades y nuevo software que me parece acto 
