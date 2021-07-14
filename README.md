@@ -18,7 +18,7 @@ Este script esta pensado para la instalacion de software de forma automatizada.
 - Ejecuta una terminal de comandos.
 - Instalacion en equipos remotos.
  
-### INSTALACION:
+### INSTALACION.
 
 #### Descargar e instalar el paquete DEB.
 - [Descargar el paque DEB](https://github.com/sukigsx/Instalacion-software/raw/main/Instalacion-software.deb). Y lo puedes instalar con tu forma habitual.
@@ -33,7 +33,7 @@ Este script esta pensado para la instalacion de software de forma automatizada.
 #### Desistalar el paquete deb, desde el terminal.
      sudo dpkg -r Instalacion-software
 
-### Forma de ejecucion
+### Forma de ejecucion.
 - Si has clonado el repositorio y con permisos de ejecucion.
 
       ./inicio.sukigsx
